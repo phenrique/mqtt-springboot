@@ -10,7 +10,7 @@ import org.springframework.integration.mqtt.core.MqttPahoClientFactory;
 @Configuration
 public class MqttClient {
     @Bean
-    MqttPahoClientFactory clientFactory(@Value("${mqtt.server.local.uri}") String brokerUri){
+    MqttPahoClientFactory clientFactory(@Value("${mqtt.server.eclipse.uri}") String brokerUri){
         var factory = new DefaultMqttPahoClientFactory();
         var options = new MqttConnectOptions();
         options.setServerURIs(new String[] {brokerUri});
